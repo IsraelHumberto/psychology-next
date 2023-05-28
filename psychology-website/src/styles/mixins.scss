@@ -1,13 +1,27 @@
 @mixin max-width {
-    max-width: 120rem;
-    padding: 0 1rem;
+    max-width: 144rem;
+    padding: 0 2rem;
     margin: 0 auto;
 }
 
-@mixin linear-btn {
-  background-color: linear-gradient(135deg, #F8BFBF 0%, #EE8B8B 100%);
+@mixin linear-btn-primary {
+  background: linear-gradient(135deg, #f3a2a2 0%, #ef7676 100%);
   box-shadow: 0px 15px 20px rgba(198, 110, 110, 0.247569);
   border-radius: 28px;
+  border: transparent;
+  color: $offWhite;
+  background-size: 350% 150%;
+  background-position: 100% 0;
+  @include transition1(all);
+  
+  &:hover {
+    background-position:  0;
+    @include transition1(all)
+  }
+}
+
+@mixin transition1($property) {
+  transition: $property ease-in-out 700ms ;
 }
 
 @mixin devices($device) {
@@ -18,12 +32,18 @@
     }
   
     @if $device == notebook {
+      @media only screen and (max-width: 1200px) {
+        @content;
+      }
+    }
+
+    @if $device == tablet {
       @media only screen and (max-width: 1024px) {
         @content;
       }
     }
   
-    @if $device == tablet {
+    @if $device == tablet-sm {
       @media only screen and (max-width: 768px) {
         @content;
       }
