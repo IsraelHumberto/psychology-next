@@ -1,38 +1,46 @@
+'use client'
+
 import React from 'react'
 import styles from './Hero.module.scss'
 import Image from 'next/image'
 import desktopImage from '../../../public/hero-desktop.jpg'
 import mobileImage from '../../../public/hero-mobile.jpg'
-import logo from '../../../public/logo.png'
+// import logo from '../../../public/logo.png'
+import { useNextSanityImage } from 'next-sanity-image'
+import client from '@/sanity'
 
-const Hero = () => {
+const Hero = ({ hero }) => {
+    const imageLogo = useNextSanityImage(client, hero.iconLogo)
+    const imageDesktop = useNextSanityImage(client, hero.imageDesktop)
+    const imageMobile = useNextSanityImage(client, hero.imageMobile)
+
     return (
         <section className={styles.hero}>
             <header className={styles.header}>
                 <div className={styles.logo}>
-                    <Image src={logo} width={31} height={31} />
+                    <Image src={imageLogo.src} loader={imageLogo.loader} width={31} height={31} />
                     <h4>
-                        RAISSA <br /> VITORIA
+                        {hero.nameLogo}
                     </h4>
                 </div>
             </header>
             <div className={styles.content}>
                 <div className={styles.text}>
                     <h1 className={styles.title}>
-                        <div className={styles.lightFont}>Lorem</div>
-                        <strong>Lorem, ipsum.</strong>
+                        <div className={styles.lightFont}>{hero.title}</div>
+                        <strong>{hero.titleBold}</strong>
                     </h1>
                     <p className={styles.subtitle}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim incidunt hic voluptatem perspiciatis minima voluptate blanditiis. Vitae distinctio doloremque libero.
+                    {hero.subtitle}
                     </p>
-                    <button className='btn btn-primary'>
-                        Lorem, ipsum.
-                    </button>
+                    <a className='btn btn-primary' href={hero.linkBtn} target='_blank'>
+                    {hero.btnText}
+                    </a>
                 </div>
             </div>
             <div className={styles.imgContainer}>
-                <Image src={desktopImage} fill={true} className={styles.desktop}/>
-                <Image src={mobileImage} fill={true} className={styles.mobile}/>
+                <Image src={imageDesktop.src} loader={imageDesktop.loader} fill={true} className={styles.desktop}/>
+                <Image src={imageMobile.src} loader={imageMobile.loader} fill={true} className={styles.mobile}/>
             </div>
         </section>
     )
