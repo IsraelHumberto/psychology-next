@@ -116,7 +116,7 @@
             }
             
             .subtitle {
-                margin-bottom: 18px;
+                margin-bottom: 28px;
                 line-height: 22px;
             }
 
@@ -131,7 +131,7 @@
         "logo"
         "image"
         "content";
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(300px, 100vw);
         grid-template-rows: 64px minmax(250px, 40vh) auto;
 
         .header, .content {
@@ -145,6 +145,10 @@
 
             .text {
                 margin: 0 auto;
+            }
+
+            .title {
+                letter-spacing: 8px;
             }
         }
 

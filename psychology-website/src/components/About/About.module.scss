@@ -7,7 +7,7 @@
     
     .content {
         @include max-width;
-        padding: $marginBottom 2rem;
+        @include section-padding;
     }
 
     .titleSection {
@@ -20,9 +20,10 @@
         display: flex;
         gap: 10rem;
         padding: 6rem 0;
+        flex-wrap: wrap;
 
         .description {
-            flex: 2 2 300px;
+            flex: 3 3 300px;
 
             p {
                 font-size: 1.6rem;
@@ -32,7 +33,7 @@
         }
 
         .specialities {
-            flex: 3 3 450px;
+            flex: 2 2 450px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -40,6 +41,7 @@
             background-color: $green300;
             color: $white;
             text-align: justify;
+            padding: 2.4rem 2rem;
             
             .title {
                 font-size: 3rem;
@@ -49,7 +51,7 @@
             
             .list {
                 width: 80%;
-                padding: 2rem 0;
+                padding-top: 2rem;
                 
                 .item {
                     list-style: none;

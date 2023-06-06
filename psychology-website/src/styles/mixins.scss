@@ -1,7 +1,23 @@
 @mixin max-width {
     max-width: 144rem;
-    padding: 0 2rem;
     margin: 0 auto;
+}
+
+@mixin section-padding {
+  padding: $marginBottom 6rem;
+
+  @include devices(notebook) {
+    padding: $marginBottom 4rem;
+  }
+  @include devices(tablet) {
+    padding: $marginBottom 3rem;
+  }
+  @include devices(tablet-sm) {
+    padding: $marginBottom 2rem;
+  }
+  @include devices(mobile) {
+    padding: $marginBottomMobile 1.5rem;
+  }
 }
 
 @mixin linear-btn-primary {
