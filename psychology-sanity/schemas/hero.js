@@ -1,6 +1,6 @@
 const hero = {
   name: 'hero',
-  title: 'Hero',
+  title: 'Seção Hero',
   type: 'document',
   fields: [
     {
