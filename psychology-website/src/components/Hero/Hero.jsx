@@ -3,9 +3,6 @@
 import React from 'react'
 import styles from './Hero.module.scss'
 import Image from 'next/image'
-import desktopImage from '../../../public/hero-desktop.jpg'
-import mobileImage from '../../../public/hero-mobile.jpg'
-// import logo from '../../../public/logo.png'
 import { useNextSanityImage } from 'next-sanity-image'
 import client from '@/sanity'
 

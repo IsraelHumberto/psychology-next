@@ -2,5 +2,7 @@ import hero from "./hero"
 import about from "./about/about"
 import paragraph from "./about/paragraph"
 import specialties from "./about/specialties"
+import gallery from "./gallery/gallery"
+import photo from "./gallery/photo"
 
-export const schemaTypes = [hero, about, paragraph, specialties]
+export const schemaTypes = [hero, about, paragraph, specialties, gallery, photo]
