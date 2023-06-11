@@ -17,7 +17,6 @@ const settings = {
 };
 
 const Gallery = ({gallery}) => {
-
   const renderGallery = gallery.photos.map(item => {
     const imageProps = useNextSanityImage(client, item.image)
 

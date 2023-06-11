@@ -10,7 +10,7 @@ const About = ({about}) => {
     return (
         <section className={styles.about}>
             <div className={styles.content}>
-                <h1 className={styles.titleSection}>{about.title}</h1>
+                <h1 className='titleSection'>{about.title}</h1>
 
                 <div className={styles.flex}>
                     <div className={styles.description}>

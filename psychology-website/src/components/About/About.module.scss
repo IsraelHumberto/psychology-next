@@ -10,12 +10,6 @@
         @include section-padding;
     }
 
-    .titleSection {
-        text-align: center;
-        font-weight: 300;
-        color: $orange700;
-    }
-
     .flex {
         display: flex;
         gap: 10rem;
