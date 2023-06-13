@@ -6,8 +6,6 @@ import { useNextSanityImage } from 'next-sanity-image'
 import client from '@/sanity'
 
 const Benefits = ({ benefits }) => {
-    console.log(benefits);
-
     const renderBenefits = benefits.benefits.map(item => {
         const imageProps = useNextSanityImage(client, item.icon)
 
