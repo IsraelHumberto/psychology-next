@@ -6,6 +6,7 @@ import Gallery from '@/components/Gallery/Gallery'
 import Benefits from '@/components/Benefits/Benefits'
 import Testimonials from '@/components/Testimonials/Testimonials'
 import { Metadata } from 'next'
+import Footer from '@/components/Footer/Footer'
  
 export const metadata = {
   title: 'Psicóloga Raíssa Vitória - Home',
@@ -18,6 +19,7 @@ export default async function Page() {
   const gallery = await client.fetch(`*[_type == "gallery"][0]`)
   const testimonials = await client.fetch(`*[_type == "testimonials"][0]`)
   const benefits = await client.fetch(`*[_type == "benefits"][0]`)
+  const footer = await client.fetch(`*[_type == "footer"][0]`)
 
   return (
     <>
@@ -26,7 +28,7 @@ export default async function Page() {
       <Gallery gallery={gallery} />
       <Testimonials testimonials={testimonials} />
       <Benefits benefits={benefits}/>
-
+      <Footer footer={footer}/>
     </>
   )
 }
