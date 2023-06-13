@@ -82,6 +82,10 @@ p,
     @include linear-btn-primary;
   }
 
+  &.btn-secondary {
+    @include linear-btn-secondary;
+  }
+
   @include devices(tablet-sm) {
     padding: 1.2rem 1.8rem;
   }

@@ -11,7 +11,6 @@ const josefins = Josefin_Sans({
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
-      <head />
       <body className={`${josefins.className} ${sacramento.variable}`}>{children}</body>
     </html>
   )

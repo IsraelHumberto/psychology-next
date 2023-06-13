@@ -36,6 +36,22 @@
   }
 }
 
+@mixin linear-btn-secondary {
+  background: linear-gradient(135deg, $orange500 0%, $orange300 100%);
+  box-shadow: 0px 15px 20px rgba(198, 110, 110, 0.247569);
+  border-radius: 28px;
+  border: transparent;
+  color: $white;
+  background-size: 350% 150%;
+  background-position: 100% 0;
+  @include transition1(all);
+  
+  &:hover {
+    background-position:  0;
+    @include transition1(all)
+  }
+}
+
 @mixin transition1($property) {
   transition: $property ease-in-out 700ms ;
 }

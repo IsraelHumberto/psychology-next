@@ -17,6 +17,7 @@ export default async function Page() {
   const about = await client.fetch(`*[_type == "about"][0]`)
   const gallery = await client.fetch(`*[_type == "gallery"][0]`)
   const testimonials = await client.fetch(`*[_type == "testimonials"][0]`)
+  const benefits = await client.fetch(`*[_type == "benefits"][0]`)
 
   return (
     <>
@@ -24,7 +25,7 @@ export default async function Page() {
       <About about={about} />
       <Gallery gallery={gallery} />
       <Testimonials testimonials={testimonials} />
-      <Benefits />
+      <Benefits benefits={benefits}/>
 
     </>
   )
