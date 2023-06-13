@@ -1,10 +1,10 @@
 import {createClient} from 'next-sanity'
 
 const client = createClient({
-    projectId: 'grflh5ea',
-    dataset: 'production',
-    apiVersion: '2023-05-28',
-    useCdn: false
+    projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+    dataset: process.env.NEXT_PUBLIC_DATASET,
+    apiVersion: process.env.NEXT_PUBLIC_API_VERSION,
+    useCdn: process.env.false
 })
 
 export default client
