@@ -11,8 +11,8 @@ const Footer = ({ footer }) => {
         const imageProps = useNextSanityImage(client, item.icon)
 
         return (
-            <a href={item.link} target="_blank" className={styles.iconApp}>
-                    <Image src={imageProps.src}  fill={true} />
+            <a href={item.link} target="_blank" key={item._key} className={styles.iconApp}>
+                    <Image src={imageProps.src}  fill={true} alt=''/>
             </a>
         )
     })

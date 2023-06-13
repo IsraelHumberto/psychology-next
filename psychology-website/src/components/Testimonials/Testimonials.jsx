@@ -12,9 +12,9 @@ const Testimonials = ({ testimonials }) => {
     const imageProps = useNextSanityImage(client, item.photo)
 
     return (
-      <div className={styles.testimonial}>
+      <div className={styles.testimonial} key={item._key}>
         <div className={styles.heading}>
-          <Image src={imageProps.src} width={52} height={52} />
+          <Image src={imageProps.src} width={52} height={52} alt=''/>
           <div className={styles.apresentation}>
             <h4 className={styles.name}>{item.name}</h4>
             <span className={styles.treatment}>{item.treatment}</span>

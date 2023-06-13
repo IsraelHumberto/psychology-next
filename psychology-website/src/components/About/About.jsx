@@ -3,9 +3,10 @@ import React from 'react'
 import styles from './About.module.scss'
 
 const About = ({about}) => {
+    console.log(about);
 
-    const paragraphs = about.text.map(item => <p>{item.name}</p>)
-    const itemsList = about.specialties.map(item => <li className={styles.item}>{item.Nome}</li>)
+    const paragraphs = about.text.map(item => <p key={item._key}>{item.name}</p>)
+    const itemsList = about.specialties.map(item => <li key={item._key} className={styles.item}>{item.Nome}</li>)
 
     return (
         <section className={styles.about}>

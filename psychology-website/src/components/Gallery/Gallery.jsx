@@ -21,8 +21,8 @@ const Gallery = ({gallery}) => {
     const imageProps = useNextSanityImage(client, item.image)
 
     return (
-      <div className={styles.box}>
-        <Image src={imageProps.src} fill={true}/>
+      <div className={styles.box} key={item._key}>
+        <Image src={imageProps.src} fill={true} alt=''/>
         <span>{item.text}</span>
       </div>
     )

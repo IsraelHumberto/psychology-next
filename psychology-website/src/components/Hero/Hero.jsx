@@ -15,7 +15,7 @@ const Hero = ({ hero }) => {
         <section className={styles.hero}>
             <header className={styles.header}>
                 <div className={styles.logo}>
-                    <Image src={imageLogo.src} loader={imageLogo.loader} width={31} height={31} />
+                    <Image src={imageLogo.src} loader={imageLogo.loader} width={31} height={31} alt=''/>
                     <h4>
                         {hero.nameLogo}
                     </h4>
@@ -36,8 +36,8 @@ const Hero = ({ hero }) => {
                 </div>
             </div>
             <div className={styles.imgContainer}>
-                <Image src={imageDesktop.src} loader={imageDesktop.loader} fill={true} className={styles.desktop}/>
-                <Image src={imageMobile.src} loader={imageMobile.loader} fill={true} className={styles.mobile}/>
+                <Image src={imageDesktop.src} loader={imageDesktop.loader} fill={true} className={styles.desktop} alt=''/>
+                <Image src={imageMobile.src} loader={imageMobile.loader} fill={true} className={styles.mobile} alt=''/>
             </div>
         </section>
     )
